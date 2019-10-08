@@ -1,1 +1,1 @@
-$.jInvertScroll(['.front', '.trees','.particles']);
+$.jInvertScroll(['.scroll']);

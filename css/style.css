@@ -26,6 +26,22 @@ main{
   z-index:1;
 }
 
+
+.kirikou{
+  /* position: absolute;
+  left: 0px; */
+  width: 3000px;
+  margin-left: 50px;
+  z-index: 5;
+}
+.KirikouImgStop{
+  width: 50px;
+}
+.KirikouImgRun{
+  width: 50px;
+  margin-left: -25px; 
+}
+
 .info{
   background: white;
   z-index:4;

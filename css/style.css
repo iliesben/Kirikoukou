@@ -1,0 +1,45 @@
+
+main{
+  background: linear-gradient(to bottom, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+.scroll{
+  position: fixed;
+  bottom: 0;
+}
+.front{
+  width:3000px;
+  z-index:3;
+}
+.trees{
+  width:4000px;
+  z-index:2;
+}
+.particles{
+  width:5000px;
+  z-index:1;
+}
+
+.info{
+  background: white;
+  z-index:4;
+  width:300px;
+  margin-left:500px;
+  margin-bottom: 200px;
+}
+
+.page
+{
+    top: 0px;
+    width: 500px;
+    background: white;
+    padding: 10px 30px;
+    border: 1px #eee solid;
+    position: absolute;
+}

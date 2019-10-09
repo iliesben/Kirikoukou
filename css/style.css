@@ -13,22 +13,30 @@ main{
   position: fixed;
   bottom: 0;
 }
-.front{
+
+.ground{
   width:3000px;
+  z-index:5;
+}
+.perso{
+  width:4000px;
+  z-index:4;
+}
+.case{
+  width:5000px;
   z-index:3;
 }
-.trees{
-  width:4000px;
+.arbre{
+  width:6000px;
   z-index:2;
 }
-.particles{
-  width:5000px;
+.background{
+  width:7000px;
   z-index:1;
 }
 
-
 .kirikou{
-  bottom:170px;
+  bottom:50px;
   left:50px;
   position:absolute;
   z-index:999;
@@ -47,7 +55,7 @@ main{
   width:300px;
   margin-left:500px;
   margin-bottom: 200px;
-  
+
 } */
 
 .info{

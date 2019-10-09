@@ -8,6 +8,7 @@ main{
   bottom: 0;
   right: 0;
   overflow: auto;
+  margin: 0 !important;
 }
 .scroll{
   position: fixed;
@@ -47,6 +48,24 @@ main{
 .KirikouImgRun{
   width: 100px;
   margin-left: -25px;
+}
+
+#sunbox{
+  position:fixed;
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  left: 50%;
+  margin-top: -50px; /* Negative half of height. */
+  margin-left: -50px; /* Negative half of width. */
+}
+#sun{
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 100px;
+  position: absolute;
+  right:500px;
 }
 
 /* .info{

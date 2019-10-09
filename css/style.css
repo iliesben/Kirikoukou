@@ -1,55 +1,33 @@
-
-main{
-  background: linear-gradient(to bottom, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  margin: 0 !important;
+body{
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: #ef8d31;
 }
-.scroll{
-  position: fixed;
-  bottom: 0;
+img{
+  position: absolute;
 }
-
-.ground{
-  width:3000px;
-  z-index:5;
+#ground{
+  bottom:0;
+  z-index: 5;
 }
-.perso{
-  width:4000px;
-  z-index:4;
+#perso{
+  bottom: 40px;
+  z-index: 4;
 }
-.case{
-  width:5000px;
-  z-index:3;
+#case{
+  bottom:0;
+  z-index: 3;
 }
-.arbre{
-  width:6000px;
-  z-index:2;
+#arbre{
+  z-index: 2;
+  bottom: 60px
 }
-.background{
-  width:7000px;
-  z-index:1;
+#background{
+  z-index: 1;
+  bottom:0;
 }
-
-.kirikou{
-  bottom:50px;
-  left:50px;
-  position:absolute;
-  z-index:999;
-}
-.KirikouImgStop{
-  width: 100px;
-}
-.KirikouImgRun{
-  width: 100px;
-  margin-left: -25px;
-}
-
 #sunbox{
   position:fixed;
   width: 100px;
@@ -66,33 +44,4 @@ main{
   border-radius: 100px;
   position: absolute;
   right:500px;
-}
-
-/* .info{
-  background: white;
-  z-index:4;
-  width:300px;
-  margin-left:500px;
-  margin-bottom: 200px;
-
-} */
-
-.info{
-  background: white;
-  z-index:4;
-  width:300px;
-  margin-left:500px;
-  margin-bottom: 200px;
-  position: relative;
-  top: 30px;
-}
-
-.page
-{
-    top: 0px;
-    width: 500px;
-    background: white;
-    padding: 10px 30px;
-    border: 1px #eee solid;
-    position: absolute;
 }

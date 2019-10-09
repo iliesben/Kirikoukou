@@ -1,21 +1,25 @@
-let tab = [
-    ["img/kirikouStop.png","KirikouImgStop"],
-    ["img/Kiricourt.gif","KirikouImgRun"],
-  ]
+let tab = ["img/kirikouStop.png","KirikouImgStop"]
 
-    const divKirikou = document.querySelector(".kirikou")
-    let imgKirikou = document.createElement('img')
-    divKirikou.appendChild(imgKirikou)
+let imgKirikouRun = document.querySelector('.KirikouImgRun')
+
+const divKirikou = document.querySelector(".kirikou")
+let imgKirikouStop = document.createElement('img')
+divKirikou.appendChild(imgKirikouStop)
+
+imgKirikouRun.style.display='none'
+
     function Scroll(){
         let scrollPos = window.pageYOffset
 
         if(scrollPos > 0){
-            imgKirikou.setAttribute('src',tab[0][0])
-            imgKirikou.setAttribute('class',tab[0][1])
+            imgKirikouRun.style.display='none'
+            imgKirikouStop.setAttribute('src',tab[0])
+            imgKirikouStop.setAttribute('class',tab[1])
         }
         if(scrollPos > 80){
-            imgKirikou.setAttribute('src',tab[1][0])
-            imgKirikou.setAttribute('class',tab[1][1])
+            imgKirikouRun.style.display='block'
+            imgKirikouStop.removeAttribute('src',tab[0])
+            imgKirikouStop.removeAttribute('class',tab[1])
         }
     }
  window.addEventListener("scroll",Scroll);

@@ -41,12 +41,23 @@ main{
   margin-left: -25px;
 }
 
+/* .info{
+  background: white;
+  z-index:4;
+  width:300px;
+  margin-left:500px;
+  margin-bottom: 200px;
+  
+} */
+
 .info{
   background: white;
   z-index:4;
   width:300px;
   margin-left:500px;
   margin-bottom: 200px;
+  position: relative;
+  top: 30px;
 }
 
 .page

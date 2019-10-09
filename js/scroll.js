@@ -10,7 +10,7 @@ imgKirikouRun.style.display='none'
 
     function Scroll(){
         let scrollPos = window.pageYOffset
-
+        // console.log(scrollPos)
         if(scrollPos > 0){
             imgKirikouRun.style.display='none'
             imgKirikouStop.setAttribute('src',tab[0])
@@ -21,5 +21,6 @@ imgKirikouRun.style.display='none'
             imgKirikouStop.removeAttribute('src',tab[0])
             imgKirikouStop.removeAttribute('class',tab[1])
         }
+        console.log(scrollPos/18.21)
     }
  window.addEventListener("scroll",Scroll);

@@ -16,15 +16,6 @@ let tab = [
         if(scrollPos > 80){
             imgKirikou.setAttribute('src',tab[1][0])
             imgKirikou.setAttribute('class',tab[1][1])
-            imgKirikou.style.transition ="margin-left linear 2s"
-            imgKirikou.style.marginLeft="1200px"
         }
     }
  window.addEventListener("scroll",Scroll);
-
-
-
-
-
-
-

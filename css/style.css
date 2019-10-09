@@ -28,18 +28,17 @@ main{
 
 
 .kirikou{
-  /* position: absolute;
-  left: 0px; */
-  width: 3000px;
-  margin-left: 50px;
-  z-index: 5;
+  bottom:170px;
+  left:50px;
+  position:absolute;
+  z-index:999;
 }
 .KirikouImgStop{
-  width: 50px;
+  width: 100px;
 }
 .KirikouImgRun{
-  width: 50px;
-  margin-left: -25px; 
+  width: 100px;
+  margin-left: -25px;
 }
 
 .info{

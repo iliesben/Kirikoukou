@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Kirikou</title>
-    <link rel="stylesheet" href="css/jInvertScroll.css">
+    <!-- <link rel="stylesheet" href="css/jInvertScroll.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
       <main>
-        <img data-speed="0" class="parallax" id="ground" src="img/ground.png" alt="">
-        <img data-speed="0" class="parallax" id="perso" src="img/perso.png" alt="">
-        <img data-speed="6" class="parallax" id="case" src="img/cases.png" alt="">
-        <img data-speed="3" class="parallax" id="arbre" src="img/arbre.png" alt="">
-        <img data-speed="2" class="parallax" id="background" src="img/background.png" alt="">
+        <img data-rellax-speed="1" class="rellax" id="ground" src="img/ground.png" alt="">
+        <img data-rellax-speed="1" class="rellax" id="perso" src="img/perso.png" alt="">
+        <img data-rellax-speed="7" class="rellax" id="case" src="img/cases.png" alt="">
+        <img data-rellax-speed="3" class="rellax" id="arbre" src="img/arbre.png" alt="">
+        <img data-rellax-speed="2" class="rellax" id="background" src="img/background.png" alt="">
 
         <div id="sunbox">
           <div id="sun">
@@ -22,6 +22,18 @@
       </main>
 
     <script type="text/javascript" src="js/rellax.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script>
+      // Also can pass in optional settings block
+      var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: true
+      });
+    </script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

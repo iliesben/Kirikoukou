@@ -49,12 +49,18 @@ img{
   border-radius: 100px;
   position: absolute;
   right:500px;
+  -webkit-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
+  box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
 }
 .plank{
   top:20%;
-  position: fixed;
-  width:300px;
-  height: 150px;
-  background: red;
+  position: absolute;
+  width:429px;
+  height: 209px;
+  background-image: url("../img/plank.png");
   z-index: 999999;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  text-align: center;
 }

@@ -38,23 +38,23 @@ window.addEventListener("scroll",Scroll);
 //Menu work
 
 let menuWatcher = document.querySelector(".menuImg")
-let MenuNav = document.querySelector(".menuUl")
+let menuOpen = document.querySelector(".menuUl")
 let i = 0
 
 function Menu(){
   if(i==0)
   {
-    MenuNav.style.transform="translateX(0px)"
+    menuOpen.style.transform="translateX(0px)"
     i++
   }
   else if(i==1)
   {
-    MenuNav.style.transform="translateX(200px)"
+    menuOpen.style.transform="translateX(200px)"
     i--
   }
 
 }
-MenuNav.addEventListener("click", Menu)
+menuOpen.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 

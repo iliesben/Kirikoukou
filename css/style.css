@@ -3,7 +3,12 @@ body{
   margin: 0;
   overflow-x: scroll;
   overflow-y: hidden;
-  background: #ef8d31;
+}
+main{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(253,187,45,1) 100%);
+  width: 6000px;
+  height: 500px;
 }
 img{
   position: absolute;
@@ -13,7 +18,7 @@ img{
   z-index: 5;
 }
 #perso{
-  bottom: 40px;
+  bottom: 10px;
   z-index: 4;
 }
 #case{
@@ -22,7 +27,7 @@ img{
 }
 #arbre{
   z-index: 2;
-  bottom: 60px
+  bottom: 10px
 }
 #background{
   z-index: 1;
@@ -44,4 +49,12 @@ img{
   border-radius: 100px;
   position: absolute;
   right:500px;
+}
+.plank{
+  top:20%;
+  position: fixed;
+  width:300px;
+  height: 150px;
+  background: red;
+  z-index: 999999;
 }

@@ -1,285 +1,288 @@
-/* First page */
-
 @font-face {
-  font-family: 'Kabel';
-  src: url('../fonts/KabelBdNormal.ttf');
+    font-family: 'Kabel';
+    src: url('../fonts/KabelBdNormal.ttf');
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    z-index: 10;
+}
+
+
+/* First page Index */
 
 #container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  /* perspective: 1000px; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-#linkKirikou {
-  position: relative;
-
-}
-#linkKirikou a {
-display: block;
-top: 0;
-left: 0;
-
-}
 #imageBackGround {
-  position: absolute;
-  width: 106%;
-  height: 106%;
-  z-index: 2;
-  /* -webkit-transform: scale(1.1);
-  transform: scale(1.1); */
-  background: url("../img/feuille.png") no-repeat center center;
-  background-size: cover;
-  transition: all 2s linear;
-  -webkit-transition: all 2s linear;
-  -moz-transition: all 2s linear;
-  -o-transition: all 2s linear;
+    position: absolute;
+    width: 106%;
+    height: 106%;
+    z-index: 2;
+    background: url("../img/feuille.png") no-repeat center center;
+    background-size: cover;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
 }
-
 
 #imageTextKirikou {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* -webkit-transform: scale(0.4);
-  transform: scale(0.4); */
-  background: url("../img/kiriri.png") no-repeat center center;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  /* background-size: cover; */
-  transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/kiriri.png") no-repeat center center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
 }
 
-
-
-.agrand{
-  animation: scale 3s;
-  animation-fill-mode: forwards
+.backGroundAnnimation {
+    animation: scale 3s;
+    animation-fill-mode: forwards
 }
-  @keyframes scale {
+
+@keyframes scale {
     0% {
-      transform: scale(1);
-      opacity: 1 ;
-      }
-    100% {
-      transform: scale(5) ;
-      opacity: 0;
+        transform: scale(1);
+        opacity: 1;
     }
-  }
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  z-index: 10;
-  overflow-x: scroll;
-  overflow-y: hidden;
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
 }
-body#village{
-  background: rgb(255,255,255);
-  background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, #68b6e4 100%);
-
-}
-body#karaba{
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(158,158,158,1) 0%, rgba(48,44,53,1) 100%);
-}
-body#source{
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(253,187,45,1) 100%);
-}
-
-main{
-  max-width: 5000px;
-  height: 500px;
-}
-img{
-  position: absolute;
-}
-#ground{
-  bottom:0;
-  z-index: 5;
-}
-
-.sourceVille img#perso{
-  z-index: 14;
-}
-#perso{
-  bottom: 10px;
-  z-index: 4;
-}
-
-#case{
-  bottom:0;
-  z-index: 3;
-}
-#arbre{
-  z-index: 2;
-  bottom: 10px
-}
-#background{
-  z-index: 1;
-  bottom:0;
-}
-#sunbox{
-  position:fixed;
-  width: 100px;
-  height: 100px;
-  top: 80%;
-  left: 50%;
-  margin-top: -50px; /* Negative half of height. */
-  margin-left: -50px; /* Negative half of width. */
-}
-#sun{
-  width: 100px;
-  height: 100px;
-  background: white;
-  border-radius: 100px;
-  position: absolute;
-  right:500px;
-  -webkit-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
-  -moz-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
-  box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
-}
-
-.kirikou{
-  position:fixed;
-  bottom:250px;
-  left:0px;
-  z-index:99;
-}
-.KirikouImgStop{
-  margin-top: -175px;
-  margin-left: -20px;
-  width: 160px;
-}
-.KirikouImgRun{
-  width: 100px;
-  /* margin-left: -25px; */
-}
-
-
-.plank{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top:20%;
-  position: absolute;
-  width:429px;
-  height: 209px;
-  background-image: url("../img/plank.png");
-  z-index: 9999;
-  padding: 0px 50px;
-  box-sizing: border-box;
-  text-align: center;
-  color: white;
-}
-.plank p{
-  font-family: Kabel;
-  text-shadow:0 4px 0 #000000;
-  text-transform: uppercase;
-}
-#plank-first{
-  left:2000px;
-}
-
-#plank-second{
-  left:4000px;
-}
-
-
-
 
 /* Menu */
 
-.fetish{
-  margin: 0 auto;
-  width: 100vw;
-  height: 20vh;
-  position: fixed;
-  z-index: 20;
+.fetish {
+    margin: 0 auto;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    z-index: 20;
 }
 
-.eyes{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
-  margin-top: 20px;
-  z-index: 40;
- }
-
- .watcher{
-  display: flex;
-  justify-content: flex-end;
-  z-index: 20;
-  margin-right: -60px;
-  margin-top: -110px;
-}
- img{
-  transform: scale(0.35)
+.eyes {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 40;
 }
 
-.eye{
-  z-index: 60;
-  width: 30px;
-  height: 30px;
-  background: rgb(252, 82, 82);
-  display: inline-block;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
+.watcher {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+    margin-right: -60px;
+    margin-top: -110px;
 }
 
-.ball{
-  width: 9px;
-  height: 9px;
-  background: #000;
-  position: absolute;
-  top: calc(50% - 5px);
-  left: calc(50% - 5px);
-  border-radius: 50%;
-  will-change: transform;
+img {
+    transform: scale(0.35)
 }
-nav{
-  margin: 0 auto;
-  width: 100vw;
-  height: 20vh;
-  position: fixed;
-  z-index:999999999999;
-}
-.menuUl{
-  /* position: fixed; */
-  padding-top: 150px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
-  transform: translateX(200px);
-  transition: transform 1s;
-  z-index:999999999999;
-}
-.menuUl li{
-  text-align: center;
-  align-items: center;
-  padding: 20px 0px;
-  padding-top:0px;
-  list-style: none;
-  z-index:999999999999;
 
+.eye {
+    z-index: 60;
+    width: 30px;
+    height: 30px;
+    background: rgb(252, 82, 82);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
 }
-.menuUl li a{
-  font-family: 'Kabel';
-  cursor: pointer;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0px 20px;
-  z-index:999999;
+
+.ball {
+    width: 9px;
+    height: 9px;
+    background: #000;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    will-change: transform;
+}
+
+nav {
+    margin: 0 auto;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    z-index: 999999999999;
+}
+
+.menuUl {
+    /* position: fixed; */
+    padding-top: 150px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateX(200px);
+    transition: transform 1s;
+    z-index: 999999999999;
+}
+
+.menuUl li {
+    text-align: center;
+    align-items: center;
+    padding: 20px 0px;
+    padding-top: 0px;
+    list-style: none;
+    z-index: 999999999999;
+}
+
+.menuUl li a {
+    font-family: 'Kabel';
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 20px;
+    z-index: 999999;
+}
+
+/* village and souce and karaba pages */
+
+body#village {
+    background: rgb(255, 255, 255);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, #68b6e4 100%);
+}
+
+
+body#source {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+body#karaba {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(158, 158, 158, 1) 0%, rgba(48, 44, 53, 1) 100%);
+}
+
+main {
+    max-width: 5000px;
+    height: 500px;
+}
+
+img {
+    position: absolute;
+}
+
+#ground {
+    bottom: 0;
+    z-index: 5;
+}
+
+.sourceVille img#perso {
+    z-index: 14;
+}
+
+#perso {
+    bottom: 10px;
+    z-index: 4;
+}
+
+#case {
+    bottom: 0;
+    z-index: 3;
+}
+
+#arbre {
+    z-index: 2;
+    bottom: 10px
+}
+
+#background {
+    z-index: 1;
+    bottom: 0;
+}
+
+/* Sun box */
+
+#sunbox {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#sun {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 100px;
+    position: absolute;
+    right: 500px;
+    -webkit-box-shadow: 0px 0px 125px 69px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 125px 69px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 125px 69px rgba(255, 255, 255, 1);
+}
+
+/* Kirikou annimation */
+
+.kirikou {
+    position: fixed;
+    bottom: 250px;
+    left: 0px;
+    z-index: 99;
+}
+
+.KirikouImgStop {
+    margin-top: -175px;
+    margin-left: -20px;
+    width: 160px;
+}
+
+.KirikouImgRun {
+    width: 100px;
+}
+
+/* plank for texte */
+
+.plank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    position: absolute;
+    width: 429px;
+    height: 209px;
+    background-image: url("../img/plank.png");
+    z-index: 9999;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.plank p {
+    font-family: Kabel;
+    text-shadow: 0 4px 0 #000000;
+    text-transform: uppercase;
+}
+
+#plank-first {
+    left: 2000px;
+}
+
+#plank-second {
+    left: 4000px;
 }

@@ -7,116 +7,98 @@
     <link rel="stylesheet" href="../css/font.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-      <meta name="description" content="Le minuscule Kirikou nait dans un village d'Afrique sur lequel une sorciere, Karaba, a jeté un terrible sort: la source est assechee, les villageois ranconnes, les hommes sont kidnappes et disparaissent mysterieusement. Elle les mange, soutiennent les villageois dans leur hantise.">
+    <meta name="description" content="Le minuscule Kirikou nait dans un village d'Afrique sur lequel une sorciere, Karaba, a jeté un terrible sort: la source est assechee, les villageois ranconnes, les hommes sont kidnappes et disparaissent mysterieusement. Elle les mange, soutiennent les villageois dans leur hantise.">
   </head>
+
   <style>
-      .menuUl li a{
-    font-family: 'Kabel';
-    cursor: pointer;
-    font-size: 20px;
-    color :#FFF;
-      }
-</style>
+    .menuUl li a{
+      color :#FFF;
+    }
+  </style>
   <body id="karaba">
 
-          <!-- Menu -->
+    <!-- Menu -->
 
-          <div class="fetish">
-              <div class="eyes">
-                    <div class="eye">
-                        <div class="ball"></div>
-                    </div>
-                    <div class="eye">
-                      <div class="ball"></div>
-                    </div>
-              </div>
-              <div class="watcher">
-                  <img class="menuImg" src="../img/fetiche_surveillant.png" alt="">
-              </div>
-
-              <nav class="menu">
-                  <ul class="menuUl">
-                    <li>
-                      <a href="../index.html" title="Accueil">ACCUEIL</a>
-                    </li>
-                    <li>
-                      <a href="../pages/village.html" title="Le village">LE VILLAGE</a>
-                    </li>
-                    <li>
-                      <a href="../pages/source.html" title="La source">LA SOURCE</a>
-                    </li>
-                    <li>
-                      <a href="../pages/karaba.html" title="Karaba">KARABA</a>
-                    </li>
-                    <li>
-                        <a href="../pages/boutique.html" title="Boutique">BOUTIQUE</a>
-                    </li>
-                    <li>
-                      <a href="../pages/music.html" title="Musiques">MUSIQUES</a>
-                    </li>
-                    <li>
-                      <a href="https://www.google.fr/maps/search/cinema/" title="Vos cinémas">VOS CINEMAS</a>
-                    </li>
-                  </ul>
-                </nav>
-            </div>
-      <main>
-        <div class="plank" id="plank-first">
-          <p>
-            Kirikou rend visite à la sorcière Karaba pour connaitre les raisons du malheur qui s'abbat sur le village.
-          </p>
-        </div>
-
-        <img data-rellax-speed="10" class="rellax" id="ground" src="../img/karaba/ground.png">
-        <img data-rellax-speed="10" class="rellax" id="perso" src="../img/karaba/perso.png">
-        <img data-rellax-speed="0" class="rellax" id="case" src="../img/karaba/karaba.png">
-        <img data-rellax-speed="-10" class="rellax" id="arbre" src="../img/karaba/arbre.png">
-        <img data-rellax-speed="-20" class="rellax" id="background" src="../img/karaba/background.png">
-
-        <div class="kirikou">
-            <img src="../img/Kiricourt.gif" class="KirikouImgRun rellax">
-          </div>
-
-        <div id="sunbox">
-          <div id="sun">
+    <div class="fetish">
+      <div class="eyes">
+        <div class="eye">
+          <div class="ball">
           </div>
         </div>
-      </main>
+        <div class="eye">
+          <div class="ball">
+          </div>
+        </div>
+      </div>
+      <div class="watcher">
+        <img class="menuImg" src="../img/fetiche_surveillant.png" alt="">
+      </div>
 
+      <nav class="menu">
+        <ul class="menuUl">
+          <li>
+            <a href="../index.html" title="Accueil">ACCUEIL</a>
+          </li>
+          <li>
+            <a href="../pages/village.html" title="Le village">LE VILLAGE</a>
+          </li>
+          <li>
+            <a href="../pages/source.html" title="La source">LA SOURCE</a>
+          </li>
+          <li>
+            <a href="../pages/karaba.html" title="Karaba">KARABA</a>
+          </li>
+          <li>
+            <a href="../pages/boutique.html" title="Boutique">BOUTIQUE</a>
+          </li>
+          <li>
+            <a href="../pages/music.html" title="Musiques">MUSIQUES</a>
+          </li>
+          <li>
+            <a href="https://www.google.fr/maps/search/cinema/" title="Vos cinémas">VOS CINEMAS</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
+    <!-- decoration and text -->
 
-      <script>
-        let balls = document.getElementsByClassName("ball");
+    <main>
+      <div class="plank" id="plank-first">
+        <p>
+          Kirikou rend visite à la sorcière Karaba pour connaitre les raisons du malheur qui s'abbat sur le village.
+        </p>
+      </div>
 
-        document.addEventListener('mousemove', function(event)
-        {
-          const x = event.clientX / window.innerWidth
-          const y = event.clientY / window.innerHeight
-          const angle = Math.atan2(y, 1 - x)
+      <img data-rellax-speed="10" class="rellax" id="ground" src="../img/karaba/ground.png">
+      <img data-rellax-speed="10" class="rellax" id="perso" src="../img/karaba/perso.png">
+      <img data-rellax-speed="0" class="rellax" id="case" src="../img/karaba/karaba.png">
+      <img data-rellax-speed="-10" class="rellax" id="arbre" src="../img/karaba/arbre.png">
+      <img data-rellax-speed="-20" class="rellax" id="background" src="../img/karaba/background.png">
 
-          const distance = Math.hypot(window.innerWidth - event.clientX, event.clientY)
-          const radius = Math.min(distance / 70, 10)
+      <div class="kirikou">
+        <img src="../img/Kiricourt.gif" class="KirikouImgRun rellax">
+      </div>
 
-          const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
-          const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
+      <!-- Sun box -->
 
-          balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
-          balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
-        })
-      </script>
-    <script type="text/javascript" src="../js/rellax.js"></script>
+      <div id="sunbox">
+        <div id="sun">
+        </div>
+      </div>
+    </main>
+
     <script src="../js/rellax.min.js"></script>
     <script>
-      // Also can pass in optional settings block
-      var rellax = new Rellax('.rellax', {
-        speed: -2,
-        center: false,
-        wrapper: null,
-        round: true,
-        vertical: true,
-        horizontal: true
-      });
+    var rellax = new Rellax('.rellax', {
+      speed: -2,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: true
+    });
     </script>
     <script type="text/javascript" src="../js/scriptKaraba.js"></script>
-  </body>
+</body>
 </html>

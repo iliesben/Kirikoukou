@@ -192,28 +192,27 @@
 
     <script>
 
-    let menuWatcher = document.querySelector('.menuImg')
-    let MenuNav = document.querySelector('.menuUl')
+    let menuNav = document.querySelector("nav")
+    let menuWatcher = document.querySelector(".menuImg")
+    let menuOpen = document.querySelector(".menuUl")
     let i = 0
 
     function Menu(){
-      console.log('marche')
       if(i==0)
       {
-        console.log('0')
-        MenuNav.style.transform='translateX(0px)'
+        menuNav.style.display="block"
+        menuOpen.style.transform="translateX(0px)"
         i++
       }
       else if(i==1)
       {
-        console.log('1')
-        MenuNav.style.transform='translateX(200px)'
+        menuNav.style.display="none"
+        menuOpen.style.transform="translateX(200px)"
         i--
       }
 
     }
     menuWatcher.addEventListener("click", Menu)
-
 
     </script>
   </body>

@@ -74,6 +74,8 @@ nav{
   height: 20vh;
   position: fixed;
   z-index:999999999999;
+  display: none;
+  transition: display 1s;
 }
 .menuUl{
   margin-top: -50px;

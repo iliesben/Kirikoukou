@@ -1,55 +1,113 @@
+/* First page */
 
-main{
-  background: linear-gradient(to bottom, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
-  display: flex;
-  position: fixed;
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* perspective: 1000px; */
+}
+
+#linkKirikou {
+  position: relative;
+
+}
+#linkKirikou a {
+display: block;
+top: 0;
+left: 0;
+
+}
+#image {
+  position: absolute;
+  width: 106%;
+  height: 106%;
+  z-index: 2;
+  /* -webkit-transform: scale(1.1);
+  transform: scale(1.1); */
+  background: url("../img/feuille.png") no-repeat center center;
+  background-size: cover;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}
+
+
+#image2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-transform: scale(0.4);
+  transform: scale(0.4); */
+  background: url("../img/kiriri.png") no-repeat center center;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  margin: 0 !important;
-}
-.scroll{
-  position: fixed;
-  bottom: 0;
+  z-index: 1;
+  /* background-size: cover; */
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
-.ground{
-  width:3000px;
-  z-index:5;
-}
-.perso{
-  width:4000px;
-  z-index:4;
-}
-.case{
-  width:5000px;
-  z-index:3;
-}
-.arbre{
-  width:6000px;
-  z-index:2;
-}
-.background{
-  width:7000px;
-  z-index:1;
-}
 
-.kirikou{
-  bottom:50px;
-  left:50px;
-  position:absolute;
-  z-index:999;
-}
-.KirikouImgStop{
-  width: 100px;
-}
-.KirikouImgRun{
-  width: 100px;
-  margin-left: -25px;
-}
 
+.agrand{
+  animation: scale 3s;
+  animation-fill-mode: forwards
+}
+  @keyframes scale {
+    0% { 
+      transform: scale(1);
+      opacity: 1 ; 
+      }
+    100% {
+      transform: scale(5) ; 
+      opacity: 0;
+    }
+  }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  z-index: 10;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: #FDF3E8;
+}
+main{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(253,187,45,1) 100%);
+  width: 6000px;
+  height: 500px;
+}
+img{
+  position: absolute;
+}
+#ground{
+  bottom:0;
+  z-index: 5;
+}
+#perso{
+  bottom: 10px;
+  z-index: 4;
+}
+#case{
+  bottom:0;
+  z-index: 3;
+}
+#arbre{
+  z-index: 2;
+  bottom: 10px
+}
+#background{
+  z-index: 1;
+  bottom:0;
+}
 #sunbox{
   position:fixed;
   width: 100px;
@@ -66,33 +124,34 @@ main{
   border-radius: 100px;
   position: absolute;
   right:500px;
+  -webkit-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
+  box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
 }
 
-/* .info{
-  background: white;
-  z-index:4;
-  width:300px;
-  margin-left:500px;
-  margin-bottom: 200px;
-
-} */
-
-.info{
-  background: white;
-  z-index:4;
-  width:300px;
-  margin-left:500px;
-  margin-bottom: 200px;
-  position: relative;
-  top: 30px;
+.kirikou{
+  position:fixed;
+  bottom:250px;
+  left:0px;
+  z-index:99;
+}
+.KirikouImgStop{
+  width: 100px;
+}
+.KirikouImgRun{
+  width: 100px;
+  /* margin-left: -25px; */
 }
 
-.page
-{
-    top: 0px;
-    width: 500px;
-    background: white;
-    padding: 10px 30px;
-    border: 1px #eee solid;
-    position: absolute;
+
+.plank{
+  top:20%;
+  position: absolute;
+  width:429px;
+  height: 209px;
+  background-image: url("../img/plank.png");
+  z-index: 999999;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  text-align: center;
 }

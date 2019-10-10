@@ -19,12 +19,12 @@ function Scroll(){
   let scrollPos = window.pageXOffset
 
   if(scrollPos > 0 && scrollPos < 19){
-    imgKirikouRun.style.display = "none"
+    imgKirikouRun.style.display="none"
     imgKirikouStop.setAttribute("src",tab[0])
     imgKirikouStop.setAttribute("class",tab[1])
   }
   if(scrollPos > 20 && scrollPos < 3999){
-    imgKirikouRun.style.display = "block"
+    imgKirikouRun.style.display="block"
     imgKirikouStop.removeAttribute("src",tab[0])
     imgKirikouStop.removeAttribute("class",tab[1])
   }

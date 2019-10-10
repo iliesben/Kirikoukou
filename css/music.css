@@ -1,190 +1,188 @@
 body{
-    background-image: url(..//img/fleur2.1.png);
-    background-repeat: no-repeat;
-    background-color: #FDF3E8;
-    margin: 0 auto;
-    font-family: 'Kabel';
-    font-size: 16px;
+  background-image: url(..//img/fleur2.1.png);
+  background-repeat: no-repeat;
+  background-color: #FDF3E8;
+  margin: 0 auto;
+  font-family: 'Kabel';
+  font-size: 16px;
 }
 
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 75px;
-    margin-right: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 75px;
+  margin-right: 75px;
 }
 
 
 /* Menu */
 
 .fetish{
-    margin: 0 auto;
-    width: 100vw;
-    height: 20vh;
-    position: fixed;
-    z-index: 20;
-  }
-  
-  .eyes{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-    margin-top: 20px;
-    z-index: 40;
-   }
-  
-   .watcher{
-    display: flex;
-    justify-content: flex-end;
-    z-index: 20;
-    margin-right: -60px;
-    margin-top: -110px; 
-  }
-  .watcher img{
-    transform: scale(0.35)
-  }
-  
-  .eye{
-    z-index: 60;
-    width: 30px;
-    height: 30px;
-    background: rgb(252, 82, 82);
-    display: inline-block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .ball{
-    width: 9px;
-    height: 9px;
-    background: #000;
-    position: absolute;
-    top: calc(50% - 5px);
-    left: calc(50% - 5px);
-    border-radius: 50%;
-    will-change: transform;
-  }
-  
-  nav{
-    margin: 0 auto;
-    width: 100vw;
-    height: 20vh;
-    position: fixed;
-    z-index:999999999999;
-  }
-  .menuUl{
-    margin-top: -50px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-    transform: translateX(200px);
-    transition: transform 1s;
-    z-index:999999999999;
-  }
-  .menuUl li{
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-    padding-top:0px; 
-    list-style: none;
-    z-index:999999999999;
-  
-  }
-  .menuUl li a{
-    font-family: 'Kabel';
-    cursor: pointer;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 0px 20px;
-    z-index:999999;
-    width: 100%;
-    color: #000;
-  }
-      
+  margin: 0 auto;
+  width: 100vw;
+  height: 20vh;
+  position: fixed;
+  z-index: 20;
+}
+
+.eyes{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+  z-index: 40;
+}
+
+.watcher{
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+  margin-right: -60px;
+  margin-top: -110px;
+}
+.watcher img{
+  transform: scale(0.35)
+}
+
+.eye{
+  z-index: 60;
+  width: 30px;
+  height: 30px;
+  background: rgb(252, 82, 82);
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball{
+  width: 9px;
+  height: 9px;
+  background: #000;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  border-radius: 50%;
+  will-change: transform;
+}
+
+nav{
+  margin: 0 auto;
+  width: 100vw;
+  height: 20vh;
+  position: fixed;
+  z-index:999999999999;
+}
+.menuUl{
+  margin-top: -50px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  transform: translateX(200px);
+  transition: transform 1s;
+  z-index:999999999999;
+}
+.menuUl li{
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  padding-top:0px;
+  list-style: none;
+  z-index:999999999999;
+
+}
+.menuUl li a{
+  font-family: 'Kabel';
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0px 20px;
+  z-index:999999;
+  width: 100%;
+  color: #000;
+}
+
 
 .nom{
-    text-align: center;
+  text-align: center;
 }
 
 .music{
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 100px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .affiche_nom{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .affiche img{
-    width: 100%;
+  width: 100%;
 }
 
 .all_track{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .track{
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .titre p{
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 footer p{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
 
 }
 
 @media screen and (max-width:1250px){
-    .music{
-        flex-direction: column;
-        justify-content: center;
-    }
+  .music{
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .affiche_nom{
-        width: 100%;
-    }
+  .affiche_nom{
+    width: 100%;
+  }
 
-    .all_track{
-        margin-top: 50px; 
-    }
+  .all_track{
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width:1024px){
-    body{
-        font-size: 16px;
-    }
+  body{
+    font-size: 16px;
+  }
 
-    .music{
-        flex-direction: column;
-        justify-content: center;
-    }
+  .music{
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .affiche_nom{
-        width: 100%;
-    }
+  .affiche_nom{
+    width: 100%;
+  }
 
-    .affiche{
-        width: 100%;
-    }
+  .affiche{
+    width: 100%;
+  }
 
-    .all_track{
-        margin-top: 50px; 
-    }
+  .all_track{
+    margin-top: 50px;
+  }
 }
-
-    

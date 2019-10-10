@@ -16,6 +16,98 @@ main{
     margin-right: 75px;
 }
 
+/* Menu */
+
+.fetish{
+    margin: 0 auto;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    z-index: 20;
+  }
+  
+  .eyes{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 40;
+   }
+  
+   .watcher{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+    margin-right: -60px;
+    margin-top: -110px; 
+  }
+  .watcher img{
+    transform: scale(0.35)
+  }
+  
+  .eye{
+    z-index: 60;
+    width: 30px;
+    height: 30px;
+    background: rgb(252, 82, 82);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ball{
+    width: 9px;
+    height: 9px;
+    background: #000;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    will-change: transform;
+  }
+  
+  nav{
+    margin: 0 auto;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    z-index:999999999999;
+  }
+  .menuUl{
+    margin-top: -50px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateX(200px);
+    transition: transform 1s;
+    z-index:999999999999;
+  }
+  .menuUl li{
+    text-align: center;
+    align-items: center;
+    padding: 20px 10px;
+    padding-top:0px; 
+    list-style: none;
+    z-index:999999999999;
+  
+  }
+  .menuUl li a{
+    font-family: 'Kabel';
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 20px;
+    z-index:999999;
+    width: 100%;
+  }
+    
+
+  
+  
+
+
 h1{
     color: #F7B55C;
     font-size: 45px;
@@ -50,13 +142,13 @@ h1{
     width: 100%;
 }
 
-ul{
+ul.listDescription{
     list-style: none;
     padding: 0;
     padding-left: 15px;
 }
 
-li{
+ul.listDescription li{
     padding-bottom: 10px;
 }
 

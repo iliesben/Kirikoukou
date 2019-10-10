@@ -38,6 +38,7 @@ function Scroll(){
 }
 window.addEventListener("scroll",Scroll);
 
+// MEnu
 
 
 let menuWatcher = document.querySelector('.menuImg')

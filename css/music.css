@@ -1,0 +1,100 @@
+body{
+    background-image: url(..//img/fleur2.1.png);
+    background-repeat: no-repeat;
+    background-color: #FDF3E8;
+    margin: 0 auto;
+    font-family: 'Kabel';
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.nom{
+    text-align: center;
+}
+
+.music{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.affiche_nom{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.affiche img{
+    width: 100%;
+}
+
+.all_track{
+    display: flex;
+    flex-direction: column;
+}
+
+.track{
+    padding-bottom: 20px;
+}
+
+.titre p{
+    margin-bottom: 5px;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+@media screen and (max-width:1250px){
+    .music{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .affiche_nom{
+        width: 100%;
+    }
+
+    .all_track{
+        margin-top: 50px; 
+    }
+}
+
+@media screen and (max-width:1024px){
+    body{
+        font-size: 16px;
+    }
+
+    .music{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .affiche_nom{
+        width: 100%;
+    }
+
+    .affiche{
+        width: 100%;
+    }
+
+    .all_track{
+        margin-top: 50px; 
+    }
+}
+
+    

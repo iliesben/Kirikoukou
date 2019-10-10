@@ -7,11 +7,51 @@
     <link rel="stylesheet" href="../css/boutique.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
+      <meta name="description" content="Le minuscule Kirikou nait dans un village d'Afrique sur lequel une sorciere, Karaba, a jeté un terrible sort: la source est assechee, les villageois ranconnes, les hommes sont kidnappes et disparaissent mysterieusement. Elle les mange, soutiennent les villageois dans leur hantise.">
   </head>
   <header>
 
   </header>
   <body>
+        <div class="fetish">
+                <div class="eyes">
+                      <div class="eye">
+                          <div class="ball"></div>
+                      </div>
+                      <div class="eye">
+                        <div class="ball"></div>
+                      </div>
+                </div>
+                <div class="watcher">
+                    <img class="menuImg" src="../img/fetiche_surveillant.png" alt="">
+                </div>
+
+                <nav class="menu">
+                      <ul class="menuUl">
+                        <li>
+                          <a href="../index.html" title="Accueil">ACCUEIL</a>
+                        </li>
+                        <li>
+                          <a href="../pages/village.html" title="Le village">LE VILLAGE</a>
+                        </li>
+                        <li>
+                          <a href="../pages/source.html" title="La source">LA SOURCE</a>
+                        </li>
+                        <li>
+                          <a href="../pages/karaba.html" title="Karaba">KARABA</a>
+                        </li>
+                        <li>
+                            <a href="../pages/boutique.html" title="Boutique">BOUTIQUE</a>
+                        </li>
+                        <li>
+                          <a href="../pages/music.html" title="Musiques">MUSIQUES</a>
+                        </li>
+                        <li>
+                          <a href="https://www.google.fr/maps/search/cinema/" title="Vos cinémas">VOS CINEMAS</a>
+                        </li>
+                      </ul>
+                    </nav>
+              </div>
     <main>
         <div class="cine">
             <div class="titre_affiche">
@@ -39,7 +79,7 @@
                         Avec Theo Sebeko, Antoinette Kellermann et Fezele Mpeka
                     </li>
                     <li>
-                        Genre Animation 
+                        Genre Animation
                     </li>
                     <li>
                         Nationalité franco-belgo-luxembourgeoise
@@ -47,13 +87,13 @@
                 </ul>
                 <div class="button_link">
                     <div class="button" id="ba">
-                        <a href="http://www.allocine.fr/video/player_gen_cmedia=19517866&cfilm=18446.html" type="submit">BANDE ANNONCE</a>
+                        <a href="http://www.allocine.fr/video/player_gen_cmedia=19517866&cfilm=18446.html" type="submit" title="Bande annonce">BANDE ANNONCE</a>
                     </div>
                     <div class="button" id="seances">
-                        <a href="http://www.allocine.fr/seance/film-18446/pres-de-115755/" type="submit">SÉANCES</a>
+                        <a href="http://www.allocine.fr/seance/film-18446/pres-de-115755/" type="submit" title="Séances">SÉANCES</a>
                     </div>
                     <div class="avis">
-                        <a href="http://www.allocine.fr/film/fichefilm-18446/critiques/presse/">Avis de presse</a>
+                        <a href="http://www.allocine.fr/film/fichefilm-18446/critiques/presse/" title="Avis de presse">Avis de presse</a>
                     </div>
                 </div>
             </div>
@@ -70,12 +110,12 @@
                 </div>
             </div>
             <div class="description">
-                <ul>
+                <ul class="listDescription">
                     <li>
                         Se déroule au Casino de Paris
                     </li>
                     <li>
-                        Du 15 décembre 2019 au 11 janvier 2020 
+                        Du 15 décembre 2019 au 11 janvier 2020
                     </li>
                     <li>
                         Durée de 2h environ
@@ -98,7 +138,7 @@
                 </p>
                 <div class="button_link">
                     <div class="button" id="seances">
-                        <a href="https://www.billetreduc.com/17789/evt.htm" type="submit">PLACES</a>
+                        <a href="https://www.billetreduc.com/17789/evt.htm" type="submit" title="Places">PLACES</a>
                     </div>
                 </div>
             </div>
@@ -111,10 +151,10 @@
             </div>
             <div class="button_link">
                 <div class="button" id="dvd">
-                    <a href="" type="submit">ACHETER LE DVD</a>
+                    <a href="" type="submit" title="Acheter le DVD">ACHETER LE DVD</a>
                 </div>
                 <div class="button" id="jv">
-                    <a href="https://www.amazon.fr/Kirikou-Karaba-musicale-Michel-Ocelot/dp/B001AN2GEY" type="submit">ACHETER LE JEU</a>
+                    <a href="https://www.amazon.fr/Kirikou-Karaba-musicale-Michel-Ocelot/dp/B001AN2GEY" type="submit" title="Acheter le jeu">ACHETER LE JEU</a>
                 </div>
             </div>
         </div>
@@ -124,5 +164,53 @@
             Ce travail a été réalisé dans le cadre d’un projet pédagogique et à des fins pédagogiques. Les droits d’exploitation n’ont pas fait l’objet d’une vérification, ni d’une acquisition.
         </p>
     </footer>
+    <script>
+
+            let balls = document.getElementsByClassName("ball");
+
+            document.addEventListener('mousemove', function(event)
+            {
+              const x = event.clientX / window.innerWidth
+              const y = event.clientY / window.innerHeight
+              const angle = Math.atan2(y, 1 - x)
+
+              const distance = Math.hypot(window.innerWidth - event.clientX, event.clientY)
+              const radius = Math.min(distance / 70, 10)
+
+              const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
+              const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
+
+              balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
+              balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
+            })
+
+
+        </script>
+    <script>
+
+        let menuWatcher = document.querySelector('.menuImg')
+        let MenuNav = document.querySelector('.menuUl')
+        let i = 0
+
+        function Menu(){
+            console.log('marche')
+        if(i==0)
+        {
+            console.log('0')
+            MenuNav.style.transform='translateX(0px)'
+            i++
+        }
+        else if(i==1)
+        {
+            console.log('1')
+            MenuNav.style.transform='translateX(200px)'
+            i--
+        }
+
+        }
+        menuWatcher.addEventListener("click", Menu)
+
+
+    </script>
   </body>
 </html>

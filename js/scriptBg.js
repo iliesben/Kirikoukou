@@ -40,7 +40,7 @@ container.addEventListener("mousemove", moveBackgound)
 container.addEventListener("click", function(){
 
         myVar = setTimeout(function(){ 
-            window.location = "../Kirikoukou/pages/index.html"
+            window.location = "../Kirikoukou/pages/village.html"
          }, 
             2000);
     

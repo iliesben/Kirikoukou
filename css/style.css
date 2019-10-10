@@ -136,7 +136,9 @@ img{
   z-index:99;
 }
 .KirikouImgStop{
-  width: 100px;
+  margin-top: -175px;
+  margin-left: -20px;
+  width: 160px;
 }
 .KirikouImgRun{
   width: 100px;
@@ -155,3 +157,57 @@ img{
   box-sizing: border-box;
   text-align: center;
 }
+
+
+
+
+/* Menu */
+
+
+.fetish{
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 45;
+}
+
+.eyes{
+  position: absolute;
+  top: 2.5%;
+  left: 94.45%;
+  width: 100px;
+  z-index: 2;
+}
+
+.watcher{
+  position: absolute;
+  top: -8.15%;
+  left: 89%;
+  /* width: 0px; */
+}
+ img{
+  transform: scale(0.35)
+}
+
+.eye{
+  width: 30px;
+  height: 30px;
+  background: rgb(252, 82, 82);
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball{
+  width: 10px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  border-radius: 50%;
+  will-change: transform;
+}
+

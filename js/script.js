@@ -1,6 +1,6 @@
 const sun=document.querySelector("#sunbox")
 
-let tab = ["../img/kirikouStop.png","KirikouImgStop"]
+let tab = ["../img/kirikouStop.png","KirikouImgStop rellax"]
 
 let imgKirikouRun = document.querySelector('.KirikouImgRun')
 
@@ -18,7 +18,7 @@ function Scroll(){
         imgKirikouStop.setAttribute('src',tab[0])
         imgKirikouStop.setAttribute('class',tab[1])
     }
-    if(scrollPos > 80){
+    if(scrollPos > 30){
         imgKirikouRun.style.display='block'
         imgKirikouStop.removeAttribute('src',tab[0])
         imgKirikouStop.removeAttribute('class',tab[1])

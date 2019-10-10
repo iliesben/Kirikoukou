@@ -1,8 +1,83 @@
-body{
-  padding: 0;
+/* First page */
+
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* perspective: 1000px; */
+}
+
+#linkKirikou {
+  position: relative;
+
+}
+#linkKirikou a {
+display: block;
+top: 0;
+left: 0;
+
+}
+#image {
+  position: absolute;
+  width: 106%;
+  height: 106%;
+  z-index: 2;
+  /* -webkit-transform: scale(1.1);
+  transform: scale(1.1); */
+  background: url("../img/feuille.png") no-repeat center center;
+  background-size: cover;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}
+
+
+#image2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-transform: scale(0.4);
+  transform: scale(0.4); */
+  background: url("../img/kiriri.png") no-repeat center center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* background-size: cover; */
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+
+
+.agrand{
+  animation: scale 3s;
+  animation-fill-mode: forwards
+}
+  @keyframes scale {
+    0% { 
+      transform: scale(1);
+      opacity: 1 ; 
+      }
+    100% {
+      transform: scale(5) ; 
+      opacity: 0;
+    }
+  }
+
+
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  z-index: 10;
   overflow-x: scroll;
   overflow-y: hidden;
+  background-color: #FDF3E8;
 }
 main{
   background: rgb(255,255,255);
@@ -53,6 +128,22 @@ img{
   -moz-box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
   box-shadow: 0px 0px 125px 69px rgba(255,255,255,1);
 }
+
+.kirikou{
+  position:fixed;
+  bottom:250px;
+  left:0px;
+  z-index:99;
+}
+.KirikouImgStop{
+  width: 100px;
+}
+.KirikouImgRun{
+  width: 100px;
+  /* margin-left: -25px; */
+}
+
+
 .plank{
   top:20%;
   position: absolute;

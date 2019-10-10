@@ -24,7 +24,7 @@ top: 0;
 left: 0;
 
 }
-#image {
+#imageBackGround {
   position: absolute;
   width: 106%;
   height: 106%;
@@ -40,7 +40,7 @@ left: 0;
 }
 
 
-#image2 {
+#imageTextKirikou {
   position: absolute;
   width: 100%;
   height: 100%;

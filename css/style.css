@@ -86,7 +86,7 @@ html, body {
 body#village{
   background: rgb(255,255,255);
   background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, #68b6e4 100%);
-  
+
 }
 body#karaba{
   background: rgb(255,255,255);
@@ -221,7 +221,7 @@ img{
   justify-content: flex-end;
   z-index: 20;
   margin-right: -60px;
-  margin-top: -110px; 
+  margin-top: -110px;
 }
  img{
   transform: scale(0.35)
@@ -270,7 +270,7 @@ nav{
   text-align: center;
   align-items: center;
   padding: 20px 0px;
-  padding-top:0px; 
+  padding-top:0px;
   list-style: none;
   z-index:999999999999;
 
@@ -283,4 +283,3 @@ nav{
   padding: 0px 20px;
   z-index:999999;
 }
-

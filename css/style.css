@@ -59,12 +59,12 @@ left: 0;
   animation-fill-mode: forwards
 }
   @keyframes scale {
-    0% { 
+    0% {
       transform: scale(1);
-      opacity: 1 ; 
+      opacity: 1 ;
       }
     100% {
-      transform: scale(5) ; 
+      transform: scale(5) ;
       opacity: 0;
     }
   }
@@ -77,11 +77,16 @@ html, body {
   z-index: 10;
   overflow-x: scroll;
   overflow-y: hidden;
-  background-color: #FDF3E8;
 }
-main{
+body#village{
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(253,187,45,1) 100%);
+}
+body#karaba{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(158,158,158,1) 0%, rgba(48,44,53,1) 100%);
+}
+main{
   width: 6000px;
   height: 500px;
 }
@@ -147,6 +152,9 @@ img{
 
 
 .plank{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top:20%;
   position: absolute;
   width:429px;
@@ -156,6 +164,19 @@ img{
   padding: 0px 50px;
   box-sizing: border-box;
   text-align: center;
+  color: white;
+}
+.plank p{
+  font-family: Kabel;
+  text-shadow:0 4px 0 #000000;
+  text-transform: uppercase;
+}
+#plank-first{
+  left:2000px;
+}
+
+#plank-second{
+  left:4000px;
 }
 
 
@@ -210,4 +231,3 @@ img{
   border-radius: 50%;
   will-change: transform;
 }
-

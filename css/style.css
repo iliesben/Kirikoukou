@@ -1,6 +1,4 @@
 /* First page */
-
-
 #container {
   position: relative;
   width: 100%;
@@ -59,12 +57,12 @@ left: 0;
   animation-fill-mode: forwards
 }
   @keyframes scale {
-    0% { 
+    0% {
       transform: scale(1);
-      opacity: 1 ; 
+      opacity: 1 ;
       }
     100% {
-      transform: scale(5) ; 
+      transform: scale(5) ;
       opacity: 0;
     }
   }
@@ -77,12 +75,11 @@ html, body {
   z-index: 10;
   overflow-x: scroll;
   overflow-y: hidden;
-  background-color: #FDF3E8;
-}
-main{
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(253,187,45,1) 100%);
-  width: 6000px;
+}
+main{
+  width: 30000px;
   height: 500px;
 }
 img{
@@ -97,7 +94,7 @@ img{
   z-index: 4;
 }
 #case{
-  bottom:0;
+  bottom:-10px;
   z-index: 3;
 }
 #arbre{

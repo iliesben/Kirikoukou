@@ -42,7 +42,7 @@ container.addEventListener("click", function(){
         myVar = setTimeout(function(){ 
             window.location = "../Kirikoukou/pages/index.html"
          }, 
-            4000);
+            2000);
     
         container.classList.add('agrand')
 

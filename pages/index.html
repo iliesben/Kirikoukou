@@ -8,25 +8,58 @@
     <link rel="stylesheet" href="../css/font.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+  <style>
+    .menuUl li a{
+      font-family: 'Kabel';
+      cursor: pointer;
+      font-size: 20px;
+      color :#000;
+        }
+  </style>
   <body id="village">
 
           <!-- Menu -->
 
-          <div class="fetish">
-              <div class="eyes">
-                    <div class="eye">
-                        <div class="ball"></div>
-                    </div>
-                    <div class="eye">
+        <div class="fetish">
+            <div class="eyes">
+                  <div class="eye">
                       <div class="ball"></div>
-                    </div>
-              </div>
-              <div class="watcher">
-                  <img src="../img/fetiche_surveillant.png" alt="">
-              </div>
+                  </div>
+                  <div class="eye">
+                    <div class="ball"></div>
+                  </div>
             </div>
-
-
+            <div class="watcher">
+                <img class="menuImg" src="../img/fetiche_surveillant.png" alt="">
+            </div>
+        
+          <nav class="menu">
+              <ul class="menuUl">
+                <li>
+                  <a href="">ACCUEIL</a> 
+                </li>
+                <li>
+                  <a href="">LE VILLAGE</a> 
+                </li>
+                <li>
+                  <a href="">LA SOURCE</a> 
+                </li>
+                <li>
+                  <a href="">LA SORCIERE</a> 
+                </li>
+                <li>
+                  <a href="">MUSIQUES</a> 
+                </li>
+                <li>
+                  <a href="">BOUTIQUE</a> 
+                </li>
+                <li>
+                  <a href="">VOS CINEMAS</a> 
+                </li>
+              </ul>
+            </nav>
+          </div>
+     
       <main>
         <div class="plank" id="plank-first">
           <p>
@@ -59,6 +92,7 @@
 
 
       <script>
+
         let balls = document.getElementsByClassName("ball");
 
         document.addEventListener('mousemove', function(event)
@@ -76,6 +110,9 @@
           balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
           balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
         })
+
+
+
       </script>
     <script type="text/javascript" src="../js/rellax.js"></script>
     <script src="../js/rellax.min.js"></script>

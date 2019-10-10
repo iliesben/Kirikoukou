@@ -30,13 +30,14 @@ function Scroll(){
     }
     if(scrollPos > 4000){
         console.log('3')
-        window.location = "../pages/source.html"
+        window.location = "../pages/boutique.html"
     }
     sun.style.transform = "rotate("+scrollPos/26+"deg)";
     console.log(scrollPos)
 
 }
 window.addEventListener("scroll",Scroll);
+
 
 
 let menuWatcher = document.querySelector('.menuImg')
@@ -59,3 +60,4 @@ function Menu(){
 
 }
 MenuNav.addEventListener("click", Menu)
+

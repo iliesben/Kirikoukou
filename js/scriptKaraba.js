@@ -71,6 +71,7 @@ window.addEventListener("scroll", function(){
 //Menu work
 
 let menuWatcher = document.querySelector(".menuImg")
+let menuLink = document.querySelector(".menuLink")
 let menuOpen = document.querySelector(".menuUl")
 let i = 0
 
@@ -87,7 +88,8 @@ function Menu(){
   }
 
 }
-menuOpen.addEventListener("click", Menu)
+menuWatcher.addEventListener("click", Menu)
+menuLink.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 

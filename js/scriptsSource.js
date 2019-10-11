@@ -72,20 +72,25 @@ window.addEventListener("scroll", function(){
 
 
 let menuWatcher = document.querySelector(".menuImg")
+let menuLink = document.querySelector(".menuLink")
 let menuOpen = document.querySelector(".menuUl")
 let i = 0
 
-function Menu() {
-    if (i == 0) {
-        menuOpen.style.transform = "translateX(0px)"
-        i++
-    } else if (i == 1) {
-        menuOpen.style.transform = "translateX(200px)"
-        i--
-    }
+function Menu(){
+  if(i==0)
+  {
+    menuOpen.style.transform="translateX(0px)"
+    i++
+  }
+  else if(i==1)
+  {
+    menuOpen.style.transform="translateX(200px)"
+    i--
+  }
 
 }
-menuOpen.addEventListener("click", Menu)
+menuWatcher.addEventListener("click", Menu)
+menuLink.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 

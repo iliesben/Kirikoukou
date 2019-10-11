@@ -10,44 +10,48 @@ const divKirikou = document.querySelector(".kirikou")
 let imgKirikouStop = document.createElement("img")
 divKirikou.appendChild(imgKirikouStop)
 
+imgKirikouRun.style.display="none"
+imgKirikouStop.setAttribute("src",tab[0])
+imgKirikouStop.setAttribute("class",tab[1])
 
-      let scrollTimer = -1
-      let lastScrollTop = 0;
+let scrollTimer = -1
+let lastScrollTop = 0;
 
-      function Scroll(){
-        let scrollPos = window.pageXOffset
+function Scroll(){
+  let scrollPos = window.pageXOffset
+  
 
-        if (scrollPos > lastScrollTop){
-          console.log('D')
-          imgKirikouRun.style.display="block"
-          imgKirikouRun.style.transform="scaleX(1)"
-          imgKirikouStop.removeAttribute("src",tab[0])
-          imgKirikouStop.removeAttribute("class",tab[1])
+  if (scrollPos > lastScrollTop){
+    console.log('D')
+    imgKirikouRun.style.display="block"
+    imgKirikouRun.style.transform="scaleX(1)"
+    imgKirikouStop.removeAttribute("src",tab[0])
+    imgKirikouStop.removeAttribute("class",tab[1])
 
-        } else {
-         console.log('G')
-         imgKirikouRun.style.display="block"
-         imgKirikouRun.style.transform="scaleX(-1)"
-         imgKirikouStop.removeAttribute("src",tab[0])
-         imgKirikouStop.removeAttribute("class",tab[1])
-      }
+  } else {
+    console.log('G')
+    imgKirikouRun.style.display="block"
+    imgKirikouRun.style.transform="scaleX(-1)"
+    imgKirikouStop.removeAttribute("src",tab[0])
+    imgKirikouStop.removeAttribute("class",tab[1])
+}
 
-        if (scrollTimer != -1)
-        clearTimeout(scrollTimer);
+  if (scrollTimer != -1)
+  clearTimeout(scrollTimer);
 
-            scrollTimer = window.setTimeout("scrollFinished()", 100);
-          
-          if(scrollPos > 4000){
-            window.location = "../pages/source.html"
-          }
-          sun.style.transform = "rotate("+scrollPos/26+"deg)";
-        }
+      scrollTimer = window.setTimeout("scrollFinished()", 100);
+    
+    if(scrollPos > 4000){
+      window.location = "../pages/source.html"
+    }
+    sun.style.transform = "rotate("+scrollPos/26+"deg)";
+  }
 
-        function scrollFinished() {
-          imgKirikouRun.style.display="none"
-          imgKirikouStop.setAttribute("src",tab[0])
-          imgKirikouStop.setAttribute("class",tab[1])
-      }
+  function scrollFinished() {
+    imgKirikouRun.style.display="none"
+    imgKirikouStop.setAttribute("src",tab[0])
+    imgKirikouStop.setAttribute("class",tab[1])
+}
 
 window.addEventListener("scroll",Scroll);
 

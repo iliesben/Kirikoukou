@@ -93,7 +93,8 @@ body {
 }
 
 img {
-  transform: scale(0.35)
+  transform: scale(0.35);
+  cursor: pointer;
 }
 
 .eye {
@@ -117,6 +118,19 @@ img {
   border-radius: 50%;
   will-change: transform;
 }
+.menuBox{
+    display: flex;
+    justify-content: end;
+    width: 143px;
+    margin-top: 160px;
+}
+.menuBox a{
+  font-size: 20px;
+  font-family: 'Kabel';
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
 
 nav {
   margin: 0 auto;
@@ -128,7 +142,7 @@ nav {
 
 .menuUl {
   /* position: fixed; */
-  padding-top: 150px;
+  /* padding-top: 150px; */
   display: flex;
   justify-content: flex-end;
   flex-direction: column;

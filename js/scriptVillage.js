@@ -16,7 +16,7 @@ imgKirikouStop.setAttribute("src",tab[0])
 imgKirikouStop.setAttribute("class",tab[1])
 
   let scrollTimer = -1
-  let lastScrollTop = 0;
+  let lastScrollTop = 0
 
   function Scroll(){
     
@@ -38,26 +38,23 @@ imgKirikouStop.setAttribute("class",tab[1])
       imgKirikouStop.removeAttribute("class",tab[1])
   }
 
-  lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scrolling
+  lastScrollTop = scrollPos <= 0 ? 0 : scrollPos
 
     if (scrollTimer != -1)
-    clearTimeout(scrollTimer);
+    clearTimeout(scrollTimer)
 
-        scrollTimer = window.setTimeout("scrollFinished()", 100);
+        scrollTimer = window.setTimeout("scrollFinished()", 100)
       
       if(scrollPos > 4000){
 
             myVar = setTimeout(function() {
               window.location = "../pages/source.html"
             },
-          800);
+          800)
         imgKirikouRun.classList.add('KirikouImgRunForUnivers')
 
-  
-        // imgKirikouRun.style.transform="translateX(2000px)"
-        // imgKirikouRun.style.transition = "transform 2s"
       }
-      sun.style.transform = "rotate("+scrollPos/26+"deg)";
+      sun.style.transform = "rotate("+scrollPos/26+"deg)"
     }
 
     function scrollFinished() {
@@ -69,20 +66,8 @@ imgKirikouStop.setAttribute("class",tab[1])
     }
   }
 
-window.addEventListener("scroll",Scroll);
+window.addEventListener("scroll",Scroll)
 
-
-// window.addEventListener("scroll", function(){ 
-//    let st = window.pageXOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-//    if (st > lastScrollTop){
-//      console.log('D')
-//       // downscroll code
-//    } else {
-//     console.log('G')
-//       // upscroll code
-//    }
-//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-// }, false);
 
 
 //Menu work
@@ -112,10 +97,11 @@ menuLink.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 
-let balls = document.getElementsByClassName("ball");
+let balls = document.querySelectorAll(".ball")
+let colors = ["black", "#d0cfce"]
 
-document.addEventListener("mousemove", function(event)
-{
+
+document.addEventListener("mousemove", function(event) {
   const x = event.clientX / window.innerWidth
   const y = event.clientY / window.innerHeight
   const angle = Math.atan2(y, 1 - x)
@@ -126,46 +112,17 @@ document.addEventListener("mousemove", function(event)
   const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
   const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
 
-  balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
-  balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
+  balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+  balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+
+
+   setInterval(
+      function(){ 
+          let temp = Math.floor(Math.random()*colors.length)
+          balls[0].style.background = colors[temp]
+          balls[1].style.background = colors[temp]
+          balls[0].style.transition = "background 0.5s"
+          balls[1].style.transition = "background 0.5s"
+      }, 2000
+  )
 })
-
-
-
-
-
-
-
-
-
-//  if(scrollPos && !scrollKi){
-  //   console.log('sc-sc')
-  //   imgKirikouRun.style.display="none"
-  //   imgKirikouStop.setAttribute("src",tab[0])
-  //   imgKirikouStop.setAttribute("class",tab[1])
-  // }
-
-  // if(scrollPos > 0 && scrollPos < 19){
-  //   imgKirikouRun.style.display="none"
-  //   imgKirikouStop.setAttribute("src",tab[0])
-  //   imgKirikouStop.setAttribute("class",tab[1])
-  // }
-  // if(scrollPos > 20 && scrollPos < 3999){
-  //   // console.log(1)
-  //   imgKirikouRun.style.display="block"
-  //   imgKirikouStop.removeAttribute("src",tab[0])
-  //   imgKirikouStop.removeAttribute("class",tab[1])
-  // }
-
-
-  // if(scrollPos > 0 && scrollPos < 19){
-  //   imgKirikouRun.style.display="none"
-  //   imgKirikouStop.setAttribute("src",tab[0])
-  //   imgKirikouStop.setAttribute("class",tab[1])
-  // }
-  // if(scrollPos > 20 && scrollPos < 3999){
-  //   console.log(1)
-  //   imgKirikouRun.style.display="block"
-  //   imgKirikouStop.removeAttribute("src",tab[0])
-  //   imgKirikouStop.removeAttribute("class",tab[1])
-  // }

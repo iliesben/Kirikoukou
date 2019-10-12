@@ -16,7 +16,7 @@ imgKirikouStop.setAttribute("class",tab[1])
 
 
 let scrollTimer = -1
-let lastScrollTop = 0;
+let lastScrollTop = 0
 
 function Scroll(){
   let scrollPos = window.pageXOffset
@@ -36,12 +36,12 @@ function Scroll(){
    imgKirikouStop.removeAttribute("class",tab[1])
 }
 
-lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scrolling
+lastScrollTop = scrollPos <= 0 ? 0 : scrollPos
 
-  if (scrollTimer != -1)
-  clearTimeout(scrollTimer);
+if (scrollTimer != -1)
+  clearTimeout(scrollTimer)
 
-      scrollTimer = window.setTimeout("scrollFinished()", 100);
+      scrollTimer = window.setTimeout("scrollFinished()", 100)
     
           
       if(scrollPos > 4000){
@@ -54,7 +54,7 @@ lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scroll
     imgKirikouRun.classList.add('KirikouImgRunForUnivers')
 
   }
-  sun.style.transform = "rotate("+scrollPos/26+"deg)";
+  sun.style.transform = "rotate("+scrollPos/26+"deg)"
 }
 
   function scrollFinished() {
@@ -67,19 +67,7 @@ lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scroll
   }
 
 
-window.addEventListener("scroll",Scroll);
-
-// window.addEventListener("scroll", function(){ 
-//   let st = window.pageXOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-//   if (st > lastScrollTop){
-//     console.log('D')
-//      // downscroll code
-//   } else {
-//    console.log('G')
-//      // upscroll code
-//   }
-//   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-// }, false);
+window.addEventListener("scroll",Scroll)
 
 
 //Menu work
@@ -107,20 +95,37 @@ menuLink.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 
-let balls = document.getElementsByClassName("ball");
+let balls = document.querySelectorAll(".ball")
 
-document.addEventListener("mousemove", function(event)
-{
-  const x = event.clientX / window.innerWidth
-  const y = event.clientY / window.innerHeight
-  const angle = Math.atan2(y, 1 - x)
+document.addEventListener("mousemove", function(event) {
+    const x = event.clientX / window.innerWidth
+    const y = event.clientY / window.innerHeight
+    let colors = ["black", "#d0cfce"]
+    const angle = Math.atan2(y, 1 - x)
 
-  const distance = Math.hypot(window.innerWidth - event.clientX, event.clientY)
-  const radius = Math.min(distance / 70, 10)
+    const distance = Math.hypot(window.innerWidth - event.clientX, event.clientY)
+    const radius = Math.min(distance / 70, 10)
 
-  const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
-  const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
+    const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
+    const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
+    console.log(eyeX)
+    // console.log(eyeY)
 
-  balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
-  balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
+    balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+    balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+
+       if(eyeX > -7 && eyeY < 7 ){
+          balls[0].style.background = '#d0cfce'
+          balls[0].style.transition = "background 0.5s"
+          balls[1].style.background = '#d0cfce'
+          balls[1].style.transition = "background 0.5s"
+                 
+       }else{
+        balls[0].style.background = 'black'
+        balls[0].style.transition = "background 0.5s"
+        balls[1].style.background = 'black'
+        balls[1].style.transition = "background 0.5s"
+            
+       }
+
 })

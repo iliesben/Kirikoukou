@@ -16,7 +16,7 @@ imgKirikouStop.setAttribute("class", tab[1])
 
 
 let scrollTimer = -1
-let lastScrollTop = 0;
+let lastScrollTop = 0
 
 function Scroll(){
   let scrollPos = window.pageXOffset
@@ -36,25 +36,25 @@ function Scroll(){
    imgKirikouStop.removeAttribute("class",tab[1])
 }
 
-lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scrolling
+lastScrollTop = scrollPos <= 0 ? 0 : scrollPos
 
 
   if (scrollTimer != -1)
-  clearTimeout(scrollTimer);
+  clearTimeout(scrollTimer)
 
-      scrollTimer = window.setTimeout("scrollFinished()", 100);
+      scrollTimer = window.setTimeout("scrollFinished()", 100)
     
         if(scrollPos > 3800){
 
             myVar = setTimeout(function() {
                 window.location = "../pages/karaba.html"
             },
-        800);
+        800)
         imgKirikouRun.classList.add('KirikouImgRunForUnivers')
 
 
         }
-        sun.style.transform = "rotate("+scrollPos/26+"deg)";
+        sun.style.transform = "rotate("+scrollPos/26+"deg)"
    }
 
    function scrollFinished() {
@@ -67,20 +67,8 @@ lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scroll
 }
 
 
-window.addEventListener("scroll",Scroll);
+window.addEventListener("scroll",Scroll)
 
-// window.addEventListener("scroll", function(){ 
-//     let st = window.pageXOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-//     if (st > lastScrollTop){
-//       console.log('D')
-//        // downscroll code
-//     } else {
-//      console.log('G')
-//        // upscroll code
-//     }
-//     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-//  }, false);
- 
 
 //Menu work
 
@@ -108,11 +96,12 @@ menuLink.addEventListener("click", Menu)
 
 // Eyes Flow cursor
 
-let balls = document.getElementsByClassName("ball");
+let balls = document.querySelectorAll(".ball")
 
 document.addEventListener("mousemove", function(event) {
     const x = event.clientX / window.innerWidth
     const y = event.clientY / window.innerHeight
+    let colors = ["0px", "9px"]
     const angle = Math.atan2(y, 1 - x)
 
     const distance = Math.hypot(window.innerWidth - event.clientX, event.clientY)
@@ -121,6 +110,27 @@ document.addEventListener("mousemove", function(event) {
     const eyeX = Math.sin(angle - Math.PI * 0.5) * radius
     const eyeY = Math.cos(angle - Math.PI * 0.5) * radius
 
-    balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
-    balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)';
+    balls[0].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+    balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
+
+
+    
+     setTimeout(
+        function(){ 
+
+            balls[0].style.height = '0px'
+            balls[1].style.height = '0px'
+            balls[0].style.transition = "height 150ms"
+            balls[1].style.transition = "height 150ms"
+        }, 1000
+    )
+    setTimeout(
+        function(){ 
+            balls[0].style.height = '9px'
+            balls[1].style.height = '9px'
+            balls[0].style.transition = "height 150ms"
+            balls[1].style.transition = "height 150ms"
+        }, 1100
+    )
+
 })

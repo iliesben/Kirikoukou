@@ -269,6 +269,19 @@ img {
   width: 100px;
 }
 
+.KirikouImgRunForUnivers{
+  animation: run 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes run {
+  0% {
+    transform:translateX(0px);
+  }
+  100% {
+    transform:translateX(2500px);
+  }
+}
 /* plank for texte */
 
 .plank {

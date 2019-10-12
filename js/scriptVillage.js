@@ -4,6 +4,7 @@ const sun=document.querySelector("#sunbox")
 
 let tab = ["../img/kirikouStop.png","KirikouImgStop rellax"]
 
+
 let imgKirikouRun = document.querySelector(".KirikouImgRun")
 
 const divKirikou = document.querySelector(".kirikou")
@@ -18,7 +19,8 @@ imgKirikouStop.setAttribute("class",tab[1])
   let lastScrollTop = 0;
 
   function Scroll(){
-    let scrollPos = window.pageXOffset
+    
+    let scrollPos = window.pageXOffset || document.documentElement.scrollTop
     
 
     if (scrollPos > lastScrollTop){
@@ -36,37 +38,51 @@ imgKirikouStop.setAttribute("class",tab[1])
       imgKirikouStop.removeAttribute("class",tab[1])
   }
 
+  lastScrollTop = scrollPos <= 0 ? 0 : scrollPos; // For Mobile or negative scrolling
+
     if (scrollTimer != -1)
     clearTimeout(scrollTimer);
 
         scrollTimer = window.setTimeout("scrollFinished()", 100);
       
       if(scrollPos > 4000){
-        window.location = "../pages/source.html"
+
+            myVar = setTimeout(function() {
+              window.location = "../pages/source.html"
+            },
+          800);
+        imgKirikouRun.classList.add('KirikouImgRunForUnivers')
+
+  
+        // imgKirikouRun.style.transform="translateX(2000px)"
+        // imgKirikouRun.style.transition = "transform 2s"
       }
       sun.style.transform = "rotate("+scrollPos/26+"deg)";
     }
 
     function scrollFinished() {
+      let scrollX = window.pageXOffset
+      if (scrollX < 3999){
       imgKirikouRun.style.display="none"
       imgKirikouStop.setAttribute("src",tab[0])
       imgKirikouStop.setAttribute("class",tab[1])
+    }
   }
 
 window.addEventListener("scroll",Scroll);
 
 
-window.addEventListener("scroll", function(){ 
-   let st = window.pageXOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-   if (st > lastScrollTop){
-     console.log('D')
-      // downscroll code
-   } else {
-    console.log('G')
-      // upscroll code
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
+// window.addEventListener("scroll", function(){ 
+//    let st = window.pageXOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+//    if (st > lastScrollTop){
+//      console.log('D')
+//       // downscroll code
+//    } else {
+//     console.log('G')
+//       // upscroll code
+//    }
+//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
 
 
 //Menu work

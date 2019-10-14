@@ -16,12 +16,12 @@ imgKirikouStop.setAttribute("class", tab[1])
 
 
 let scrollTimer = -1
-let lastScrollTop = 0
+let lastScroll = 0
 
 function Scroll(){
   let scrollPos = window.pageXOffset
 
-  if (scrollPos > lastScrollTop){
+  if (scrollPos > lastScroll){
     console.log('D')
     imgKirikouRun.style.display="block"
     imgKirikouRun.style.transform="scaleX(1)"
@@ -36,14 +36,14 @@ function Scroll(){
    imgKirikouStop.removeAttribute("class",tab[1])
 }
 
-lastScrollTop = scrollPos <= 0 ? 0 : scrollPos
+lastScroll = scrollPos <= 0 ? 0 : scrollPos
 
 
   if (scrollTimer != -1)
   clearTimeout(scrollTimer)
 
       scrollTimer = window.setTimeout("scrollFinished()", 100)
-    
+
         if(scrollPos > 3800){
 
             myVar = setTimeout(function() {
@@ -114,22 +114,22 @@ document.addEventListener("mousemove", function(event) {
     balls[1].style.transform = 'translate(' + eyeX + 'px, ' + eyeY + 'px)'
 
 
-    
+
      setTimeout(
-        function(){ 
+        function(){
 
             balls[0].style.height = '0px'
             balls[1].style.height = '0px'
-            balls[0].style.transition = "height 150ms"
-            balls[1].style.transition = "height 150ms"
+            balls[0].style.transition = "height 50ms"
+            balls[1].style.transition = "height 50ms"
         }, 1000
     )
     setTimeout(
-        function(){ 
+        function(){
             balls[0].style.height = '9px'
             balls[1].style.height = '9px'
-            balls[0].style.transition = "height 150ms"
-            balls[1].style.transition = "height 150ms"
+            balls[0].style.transition = "height 50ms"
+            balls[1].style.transition = "height 50ms"
         }, 1100
     )
 
